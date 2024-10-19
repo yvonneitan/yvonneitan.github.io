@@ -17,34 +17,7 @@ const LandingPage = () => {
 
   return (
     <div className="landing-page">
-      <div className="sidebar">
-        <a className="sidebar__logo" href="index.html">
-          Yvonne Itangishaka
-        </a>
-        <ul className="sidebar__nav">
-          <li className="sidebar__nav-item">
-            <a href="#about" className="sidebar__nav-link" onClick={(e) => scrollToSection(e, 'about')}>
-              About Me
-            </a>
-          </li>
-          <li className="sidebar__nav-item">
-            <a href="#skills" className="sidebar__nav-link" onClick={(e) => scrollToSection(e, 'skills')}>
-              Skills
-            </a>
-          </li>
-          <li className="sidebar__nav-item">
-            <a href="#projects" className="sidebar__nav-link" onClick={(e) => scrollToSection(e, 'projects')}>
-              Projects
-            </a>
-          </li>
-          <li className="sidebar__nav-item">
-            <a href="#contact" className="sidebar__nav-link" onClick={(e) => scrollToSection(e, 'contact')}>
-              Contact
-            </a>
-          </li>
-        </ul>
-      </div>
-
+    
       <header className="header">
         <h1 className="header__title">Hi!</h1>
         <h2 className="header__subtitle">I am Yvonne</h2>

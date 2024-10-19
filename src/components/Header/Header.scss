@@ -1,0 +1,37 @@
+@use "../../../public/styles/partials/variables" as *;
+
+.sidebar {
+  display: flex;
+      
+      &__nav {
+        display: flex;
+        flex-direction: row;
+        list-style: none;
+        padding: 0;
+        &-logo {
+           
+            color: red;
+            text-decoration: none;
+           
+          }
+     
+          &-link {
+            color: $primary-color;
+            transition: color 0.3s;
+    
+            &:hover {
+              color: lighten($text-color, 10%);
+            }
+    
+        }
+        &-contact {
+          
+            color: red;
+            text-decoration: none;
+            
+          }
+      }
+      
+    
+      
+    }
