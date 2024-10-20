@@ -3,35 +3,6 @@
   font-family: 'Avenir', sans-serif; // Change this to your preferred font
   color: $text-color;
 }
-
-
-.header {
-  background: url('../../assets/images/rendering.jpg') no-repeat center center / cover; 
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  color: $secondary-color;
-  border-radius: 5px;
-  height:50vh;
-
-  &__title {
-    font-size: 3rem;
-    margin: 0;
-  }
-
-  &__subtitle {
-    font-size: 2rem;
-    margin: 0.5rem 0;
-  }
-
-  &__description {
-    font-size: 1.2rem;
-    margin: 1rem 0;
-  }
-}
-
 .about-section,
 .skills-section,
 .projects-section,
@@ -59,7 +30,6 @@
   position: relative;
   display: inline-block;
   margin: 1rem;
-  text-decoration: none;
   color: $text-color;
 
   &:hover {

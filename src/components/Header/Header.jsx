@@ -4,30 +4,26 @@ import "./Header.scss"
 const Header =() =>{
   return (
 
-        <div className="sidebar">
-            <div className="sidebar__nav">
+        <div className="header">
+            <div className="header__nav">
 
-            <p className="sidebar__nav-logo">
+            <p className="header__nav-logo">
               Yvonne Itangishaka
             </p>
-              <p href="#about" className="sidebar__nav-link" onClick={(e) => scrollToSection(e, 'about')}>
+              <p href="#about" className="header__nav-link" onClick={(e) => scrollToSection(e, 'about')}>
                 About Me
               </p>
-              <p href="#skills" className="sidebar__nav-link" onClick={(e) => scrollToSection(e, 'skills')}>
+              <p href="#skills" className="header__nav-link" onClick={(e) => scrollToSection(e, 'skills')}>
                 Skills
             </p>
-              <p href="#projects" className="sidebar__nav-link" onClick={(e) => scrollToSection(e, 'projects')}>
+              <p href="#projects" className="header__nav-link" onClick={(e) => scrollToSection(e, 'projects')}>
                 Projects
             </p>
-            <p href="#contact" className="sidebar__nav-contact" onClick={(e) => scrollToSection(e, 'contact')}>
+            <p href="#contact" className="header__nav-contact" onClick={(e) => scrollToSection(e, 'contact')}>
                 Contact
               </p>
          
             </div>
-              {/* <p href="#contact" className="sidebar__nav-contact" onClick={(e) => scrollToSection(e, 'contact')}>
-                Contact
-              </p> */}
-         
       </div>
   
   )

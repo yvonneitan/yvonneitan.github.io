@@ -17,15 +17,6 @@ const LandingPage = () => {
 
   return (
     <div className="landing-page">
-    
-      <header className="header">
-        <h1 className="header__title">Hi!</h1>
-        <h2 className="header__subtitle">I am Yvonne</h2>
-        <p className="header__description" data-bold="true">
-          Software Developer | Developer Engineer | UX / UI Designer
-        </p>
-      </header>
-
       <section id="about" className="about-section">
         <div className="container text-center">
           <div className="about-section__content">

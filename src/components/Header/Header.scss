@@ -1,37 +1,67 @@
 @use "../../../public/styles/partials/variables" as *;
 
-.sidebar {
+.header {
   display: flex;
-      
-      &__nav {
-        display: flex;
-        flex-direction: row;
-        list-style: none;
-        padding: 0;
-        &-logo {
-           
-            color: red;
-            text-decoration: none;
-           
-          }
-     
-          &-link {
-            color: $primary-color;
-            transition: color 0.3s;
-    
-            &:hover {
-              color: lighten($text-color, 10%);
-            }
-    
-        }
-        &-contact {
-          
-            color: red;
-            text-decoration: none;
-            
-          }
-      }
-      
-    
-      
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  background: url("../../assets/images/banner.jpg") no-repeat center center / cover;
+  height: 100vh; // Fullscreen for a better hero effect
+
+  &__nav {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    &-logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: $secondary-color;
+      background-color: $primary-color;
+      border-radius: 5px;
+      padding: 0.75rem 1rem;
+      text-transform: uppercase; // More modern style
     }
+
+    &-list {
+      display: flex;
+      gap: 1.5rem; // Spacing between navigation items
+    }
+
+    &-link,
+    &-contact {
+      color: $text-color;
+      background-color: transparent;
+      border-radius: 5px;
+      padding: 0.5rem 1rem;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      text-decoration: none;
+      font-size: 1rem;
+      font-weight: 500;
+
+      &:hover {
+        color: lighten($text-color, 10%);
+        background-color: $hover-background-color; // Use hover bg for nice effect
+      }
+
+      &:active {
+        transform: scale(0.98); // Click feedback
+      }
+    }
+
+    &-contact {
+      color: $secondary-color;
+      border: 2px solid $secondary-color;
+      background-color: $primary-color;
+      padding: 0.75rem 1rem;
+      font-weight: bold;
+      text-transform: uppercase;
+
+      &:hover {
+        background-color: darken($primary-color, 10%);
+      }
+    }
+  }
+}

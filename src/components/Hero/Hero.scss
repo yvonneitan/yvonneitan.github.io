@@ -1,0 +1,27 @@
+@use "../../../public/styles/partials/mixins" as *;
+@use "../../../public/styles/partials/variables" as *;
+
+.hero {
+    background: url('../../assets/images/rendering.jpg') no-repeat center center / cover; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: $secondary-color;
+    height:40vh;
+    &__title {
+      font-size: 3rem;
+      margin: 0;
+    }
+  
+    &__subtitle {
+      font-size: 2rem;
+      margin: 0.5rem 0;
+    }
+  
+    &__description {
+      font-size: 1.2rem;
+      margin: 1rem 0;
+    }
+  }
