@@ -10,7 +10,7 @@ const ContactForm = () => {
   return (
     <section id="contact" className="contact-section">
       <div className="contact-section__container">
-        <h2 className="contact-section__subtitle">Contact</h2>
+        <h2 className="contact-section__subtitle">Let's Work together!</h2>
         <form id="contactForm" className="contact-section__form" onSubmit={handleSubmit}>
           <div className="contact-section__form-group">
             <label htmlFor="fname" className="contact-section__label">First Name:</label>
