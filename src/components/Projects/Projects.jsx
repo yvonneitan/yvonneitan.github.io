@@ -2,10 +2,10 @@ import React from 'react';
 import './Projects.scss';
 
 const projects = [
-  { name: 'YPMA', url: 'project1.html', image: "/src/assets/images/minimalist.jpg" },
-  { name: 'MOT', url: 'project2.html', image: "/src/assets/images/minimalist.jpg" },
-  { name: 'IAW', url: 'project3.html', image: "/src/assets/images/minimalist.jpg" },
-  { name: 'AG-EROSION', url: 'project4.html', image: "/src/assets/images/minimalist.jpg" },
+  { name: "nitro-coffeeshop", url: "https://nitrocoffee-itan.netlify.app/", image: "/src/assets/images/projects/nitro-coffeeShop.png" },
+  { name: "BandSite", url: "https://bandsite-itan.netlify.app/", image: "/src/assets/images/projects/bandsite.png" },
+  { name: "BrainFlix", url: "https://brainflix-itan.netlify.app/", image: "/src/assets/images/minimalist.jpg" },
+  { name: 'InStock', url: 'project4.html', image: "/src/assets/images/minimalist.jpg" },
   { name: 'ESA', url: 'project5.html', image: "/src/assets/images/minimalist.jpg" },
   { name: 'HYBRID MODEL-BRS', url: 'project6.html', image: "/src/assets/images/minimalist.jpg" },
   { name: 'NutriLi', url: 'project7.html', image: "/src/assets/images/minimalist.jpg"},
