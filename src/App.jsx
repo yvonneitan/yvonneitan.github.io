@@ -1,10 +1,11 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+
 import './App.scss'
-import LandingPage from './components/LandingPage/LandingPage'
 import Header from './components/Header/Header'
-import Hero from './components/Hero/Hero'
+// import Hero from './components/Hero/Hero'
+import About from './components/About/About'
+import Skills from './components/Skills/Skills'
+import Projects from './components/Projects/Projects'
+import ContactsForm from './components/ContactsForm/ContactsForm'
 
 function App() {
 
@@ -12,9 +13,10 @@ function App() {
   return (
     <>
   <Header/>
-  <Hero/>
-     <LandingPage/>
-      
+  <About/>
+  <Skills/>
+  <Projects/> 
+  <ContactsForm/>  
     </>
   )
 }
