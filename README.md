@@ -5,7 +5,7 @@
 ## 🌐 About Me
 - 🎓 **Computer Science and Big Data Systems Graduate**
 - 🎓 **Software Engineering Graduate**
-- 🛠️ **Aspiring Software Engineer** with an eye in **UX/UI Designing**
+- 🛠️ **Aspiring Software Engineer, Data Analyst** with an eye in **UX/UI Designing**
 - 💻 I enjoy creating seamless web experiences and building innovative software solutions
 - 🌍 I’m passionate about **user-centered design** and **problem solving** in tech
 
