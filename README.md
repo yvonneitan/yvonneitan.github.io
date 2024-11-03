@@ -61,17 +61,6 @@
 - ![Bash](https://img.shields.io/badge/-Bash-4EAA25?style=flat-square&logo=gnu-bash&logoColor=white)
 - ![Data Security](https://img.shields.io/badge/-Data%20Security-2F4F4F?style=flat-square&logo=lock)
 
-### 🌟Projects
-
-#### [📸 BandSite](https://github.com/yvonneitan/yvonne-itangishaka-bandsite)
-**Description**: A dynamic, responsive site for musicians with interactive features, image grids, and custom styling for different screen sizes.  
-**Tech Stack**: HTML, SCSS, JavaScript  
-
-#### 📅 Projects Management Tool - Private to the Company
-**Description**: A project developed during a Microsoft Hackathon, designed to streamline project assignments and requests between managers and team members.  
-**Tech Stack**: JavaScript, HTML, CSS
-
-
 ### 📬 Let's Connect!
 - **LinkedIn**: [linkedin.com/in/yvonneitan](https://www.linkedin.com/in/yvonneitan)
 - **Email**: yvonnejacie02@gmail.com
