@@ -3,7 +3,7 @@
 ## An enthusiastic software developer with a passion for building creative, user-friendly web applications and software solutions.
 
 ## 🌐 About Me
-- 🎓 **Computer Science Graduate**
+- 🎓 **Computer Science and Big Data Systems Graduate**
 - 🎓 **Software Engineering Graduate**
 - 🛠️ **Aspiring Software Engineer** with an eye in **UX/UI Designing**
 - 💻 I enjoy creating seamless web experiences and building innovative software solutions
