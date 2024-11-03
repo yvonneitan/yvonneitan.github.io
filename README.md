@@ -23,7 +23,7 @@
 
 ### 🌟Projects
 
-#### [📸 BandSite](https://username.github.io/BandSite/)
+#### [📸 BandSite](https://github.com/yvonneitan/yvonne-itangishaka-bandsite)
 **Description**: A dynamic, responsive site for musicians with interactive features, image grids, and custom styling for different screen sizes.  
 **Tech Stack**: HTML, SCSS, JavaScript  
 
