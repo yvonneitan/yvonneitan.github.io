@@ -1,0 +1,186 @@
+@use "../assets/styles/partials/variables" as *;
+@use "../assets/styles/partials/mixins" as *;
+
+.projects {
+  // Base padding and text alignment for mobile
+  padding: 2rem 1rem;
+  text-align: center;
+
+  &.dark {
+    // Dark theme styles
+    background-color: #1a1a1a;
+    color: $secondary-color;
+
+    .projects__title {
+      color: $greenText-color;
+    }
+
+    .project__card {
+      background-color: #2a2a2a;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    }
+
+    .project__title {
+      color: $greenText-color;
+    }
+
+    .project__description {
+      color: #ccc;
+    }
+
+    .project__open-icon {
+      background-color: rgba(51, 49, 49, 0.2);
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.1);
+      }
+    }
+  }
+
+  &.light {
+    // Light theme styles
+    background-color: $text-color;
+    color: #000;
+
+    .projects__title {
+      color: $greenText-color;
+    }
+
+    .project__card {
+      background-color: #f9f9f9;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .project__title {
+      color: $greenText-color;
+    }
+
+    .project__description {
+      color: #666;
+    }
+
+    .project__open-icon {
+      background-color: rgba(0, 0, 0, 0.2);
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.3);
+      }
+    }
+  }
+
+  // Tablet styles
+  @include tablet {
+    padding: 3rem 2rem;
+  }
+
+  // Desktop styles
+  @include desktop {
+    padding: 4rem 2rem;
+  }
+
+  &__title {
+    // Title styles for all screen sizes
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    margin-top: 5.5rem;
+
+    // Tablet styles
+    @include tablet {
+      font-size: 3rem;
+    }
+
+    // Desktop styles
+    @include desktop {
+      font-size: 5rem;
+    }
+  }
+
+  &__list {
+    // Grid layout for project cards
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    // Tablet styles
+    @include tablet {
+      gap: 2rem;
+    }
+
+    // Desktop styles
+    @include desktop {
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+  }
+
+  .project__card {
+    // Styling for individual project cards
+    position: relative;
+    border-radius: 8px;
+    padding: 1.5rem;
+    transition: transform 0.3s ease;
+
+    // Tablet styles
+    @include tablet {
+      padding: 2rem;
+    }
+
+    // Desktop styles
+    @include desktop {
+      padding: 2.5rem;
+    }
+
+    &:hover {
+      transform: translateY(-10px);
+    }
+  }
+
+  .project__image {
+    // Image styling for project cards
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+  }
+
+  .project__title {
+    // Title styling for project cards
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+
+    // Tablet styles
+    @include tablet {
+      font-size: 1.5rem;
+    }
+  }
+
+  .project__description {
+    // Description styling for project cards
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+
+    // Tablet styles
+    @include tablet {
+      font-size: 1rem;
+    }
+  }
+
+  .project__open-icon {
+    // Open icon styling for project cards
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    padding: 0.5rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+  }
+
+  .open-icon {
+    // Icon size and cursor
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+  }
+}

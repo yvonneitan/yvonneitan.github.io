@@ -1,0 +1,185 @@
+@use "../assets/styles/partials/variables" as *;
+@use "../assets/styles/partials/mixins" as *;
+
+.skills {
+  // Base padding and text alignment for mobile
+  padding: 2rem 1rem;
+  text-align: center;
+
+  &.dark {
+    // Dark mode styling
+    background-color: #1a1a1a;
+    color: $secondary-color;
+
+    .skills__title {
+      color: $greenText-color;
+    }
+
+    .skills__category {
+      background-color: #2a2a2a;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    }
+
+    .skills__category-title {
+      color: $secondary-color;
+      border-bottom-color: $greenText-color;
+    }
+
+    .skill__item {
+      background-color: #333;
+      color: $secondary-color;
+
+      &:hover {
+        background-color: $greenText-color;
+        color: #1a1a1a;
+      }
+    }
+  }
+
+  &.light {
+    // Light mode styling
+    background-color: $text-color;
+    color: #000;
+
+    .skills__title {
+      color: #257c54;
+    }
+
+    .skills__category {
+      background-color: #f9f9f9;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .skills__category-title {
+      color: $primary-color;
+      border-bottom-color: #257c54;
+    }
+
+    .skill__item {
+      background-color: #e0e0e0;
+      color: #000;
+
+      &:hover {
+        background-color: #257c54;
+        color: $secondary-color;
+      }
+    }
+  }
+
+  // Tablet styles
+  @include tablet {
+    padding: 3rem 2rem;
+  }
+
+  // Desktop styles
+  @include desktop {
+    padding: 4rem 2rem;
+  }
+
+  &__title {
+    // Title styling
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+    margin-top: 5.5rem;
+
+    // Tablet styles
+    @include tablet {
+      font-size: 3rem;
+    }
+
+    // Desktop styles
+    @include desktop {
+      font-size: 5rem;
+    }
+  }
+
+  &__categories {
+    // Layout for skill categories
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    // Tablet styles
+    @include tablet {
+      gap: 1.5rem;
+    }
+
+    // Desktop styles
+    @include desktop {
+      gap: 2rem;
+    }
+  }
+
+  &__category {
+    // Skill category styling
+    border-radius: 12px;
+    padding: 1rem;
+    flex: 1 1 100%;
+    max-width: 100%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    // Tablet styles
+    @include tablet {
+      flex: 1 1 calc(50% - 1.5rem);
+      max-width: calc(50% - 1.5rem);
+    }
+
+    // Desktop styles
+    @include desktop {
+      flex: 1 1 calc(33.333% - 2rem);
+      max-width: calc(33.333% - 2rem);
+    }
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+    }
+  }
+
+  &__category-title {
+    // Title of each category
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    color: $secondary-color;
+    text-transform: capitalize;
+    font-weight: 600;
+    border-bottom: 2px solid $accent-color;
+    display: inline-block;
+    padding-bottom: 0.5rem;
+
+    // Tablet styles
+    @include tablet {
+      font-size: 1.5rem;
+    }
+  }
+
+  &__list {
+    // List layout for skills
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+
+    // Tablet styles
+    @include tablet {
+      gap: 0.75rem;
+    }
+  }
+
+  .skill__item {
+    // Styling for individual skill items
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    cursor: default;
+
+    // Tablet styles
+    @include tablet {
+      font-size: 1rem;
+    }
+  }
+}

@@ -1,0 +1,144 @@
+@use "../assets/styles/partials/mixins" as *;
+@use "../assets/styles/partials/variables" as *;
+
+.contact {
+  padding: 2rem 1rem;
+  text-align: center;
+
+  &.dark {
+    background-color: #1a1a1a;
+    color: $secondary-color;
+
+    .contact__title {
+      color: $greenText-color;
+    }
+
+    input,
+    textarea {
+      background-color: #2a2a2a;
+      color: $secondary-color;
+      border-color: $greenText-color;
+
+      &::placeholder {
+        color: #ccc;
+      }
+    }
+
+    .contact__button {
+      background-color: $greenText-color;
+      color: $secondary-color;
+
+
+      &:hover {
+        background-color: darken($greenText-color, 20%);
+        border:0.0625rem solid $secondary-color;
+
+      }
+    }
+  }
+
+  &.light {
+    background-color: $text-color;
+    color: #000;
+
+    .contact__title {
+      color: $greenText-color;
+    }
+
+    input,
+    textarea {
+      background-color: #f9f9f9;
+      color: #000;
+      border-color: $greenText-color;
+
+      &::placeholder {
+        color: #666;
+      }
+    }
+
+    .contact__button {
+      background-color: $background-color;
+      color: rgb(255, 255, 255);
+
+      &:hover {
+        background-color: darken($greenText-color, 10%);
+      }
+    }
+  }
+
+  @include tablet {
+    padding: 3rem 2rem;
+  }
+
+  @include desktop {
+    padding: 4rem 2rem;
+  }
+
+  &__title {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+
+    @include tablet {
+      font-size: 3rem;
+    }
+
+    @include desktop {
+      font-size: 5rem;
+    }
+  }
+
+  &__form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    @include tablet {
+      gap: 1.5rem;
+    }
+
+    @include desktop {
+      gap: 2rem;
+    }
+  }
+
+  input,
+  textarea {
+    padding: 0.75rem;
+    border: 1px solid;
+    border-radius: 4px;
+    font-size: 1rem;
+
+    @include tablet {
+      font-size: 1.1rem;
+    }
+
+    @include desktop {
+      font-size: 1.2rem;
+    }
+  }
+
+  textarea {
+    resize: vertical;
+    min-height: 150px;
+  }
+
+  &__button {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    @include tablet {
+      font-size: 1.1rem;
+    }
+
+    @include desktop {
+      font-size: 1.2rem;
+    }
+  }
+}

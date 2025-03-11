@@ -1,0 +1,147 @@
+@use "../assets/styles/partials/variables" as *;
+
+// Header styles
+.header {
+  padding:1.5rem 1rem;
+  background-color: var(--primary-color);
+  top: 0;
+  position: fixed;
+  width: 100%;
+  border-bottom: 0.0625rem solid $greenText-color;
+  z-index: 100;
+
+  // Container for header content
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+    padding: 0 1.5rem;
+    position: relative;
+    margin-left: 2rem;
+    margin-top: 0.5rem;
+  }
+
+  // Navigation bar styles
+  &__nav {
+    display: flex;
+    gap: 2rem;
+
+    &-link {
+      background: none;
+      border: none;
+      color: $greenText-color;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: color 0.3s ease, transform 0.3s ease;
+    }
+  }
+
+  // Mobile dropdown menu icon
+  &__menu-icon {
+    display: none;
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: $greenText-color;
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: scale(1.1);
+      color: $greenText-color;
+    }
+  }
+
+  // Dark Mode Toggle Button
+  &__dark-mode-toggle {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--text-color);
+    transition: transform 0.3s ease;
+    margin-left: auto;
+    margin-right: 0.5rem;
+
+    &:hover {
+      transform: scale(1.1);
+      background-color: $greenText-color;
+      border-radius: 2.8125rem;
+    }
+  }
+
+  // Mobile-specific styles
+  @media (max-width: 767px) {
+    padding: 1.5rem;
+
+    // Adjust container layout for mobile
+    &__container {
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    // Show menu icon for mobile
+    &__menu-icon {
+      display: block;
+      order: 1;
+    }
+
+    // Hidden nav by default, appears when toggled
+    &__nav {
+      display: none;
+      flex-direction: row;
+      gap: 1rem;
+      align-items: center;
+      order: 2;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: $greyText-color;
+      padding: 0.5rem;
+      border-radius: 0.5rem;
+    }
+
+    &__nav--open {
+      display: flex;
+    }
+
+    &__dark-mode-toggle {
+      order: 3;
+      margin-left: 0;
+    }
+  }
+}
+
+// Navigation link with tooltip
+.header__nav-link {
+  position: relative;
+}
+
+// Tooltip styling
+.tooltip-text {
+  visibility: hidden;
+  color: $greenText-color;
+  text-align: center;
+  padding: 0.5rem;
+  border-radius: 4px;
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.3s;
+  white-space: nowrap;
+  font-size: 0.9rem;
+  background: transparent;
+}
+
+// Tooltip hover effect
+.tooltip-target {
+  cursor: pointer;
+}
+
+.tooltip-target:hover + .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}

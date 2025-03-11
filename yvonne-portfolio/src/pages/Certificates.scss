@@ -1,0 +1,283 @@
+@use "../assets/styles/partials/variables" as *;
+@use "../assets/styles/partials/mixins" as *;
+
+// Main certificates section styling
+.certificates {
+  padding: 2rem 1rem;
+  text-align: center;
+
+  // Dark mode styling
+  &.dark {
+    background-color: #1a1a1a;
+    color: $secondary-color;
+
+    .certificates__title {
+      color: $greenText-color;
+    }
+
+    .certificate__card {
+      background-color: #2a2a2a;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    }
+
+    input {
+      background-color: #ccc;
+      color: #333;
+      border-color: $greenText-color;
+
+      &::placeholder {
+        background-color: #ccc;
+        color: #333;
+      }
+    }
+
+    .certificates__button {
+      background-color: $greenText-color;
+      color: $secondary-color;
+
+      &:hover {
+        background-color: darken($greenText-color, 20%);
+        border: 0.0625rem solid $secondary-color;
+      }
+    }
+
+    .certificate__open-icon {
+      background-color: rgba(255, 255, 255, 0.1);
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+      }
+    }
+
+    .certificate__overlay {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+  }
+
+  // Light mode styling
+  &.light {
+    background-color: $text-color;
+    color: #000;
+
+    .certificates__title {
+      color: $greenText-color;
+    }
+
+    .certificate__card {
+      background-color: #f9f9f9;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    input {
+      background-color: #f9f9f9;
+      color: #000;
+      border-color: $greenText-color;
+
+      &::placeholder {
+        color: #666;
+      }
+    }
+
+    .certificates__button {
+      background-color: $background-color;
+      color: rgb(255, 255, 255);
+
+      &:hover {
+        background-color: darken($greenText-color, 10%);
+      }
+    }
+
+    .certificate__open-icon {
+      background-color: rgba(0, 0, 0, 0.1);
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.2);
+      }
+    }
+
+    .certificate__overlay {
+      background-color: rgba(255, 255, 255, 0.9);
+      color: #000;
+    }
+  }
+
+  // Responsive styles for tablets
+  @include tablet {
+    padding: 3rem 2rem;
+  }
+
+  // Responsive styles for desktops
+  @include desktop {
+    padding: 4rem 2rem;
+  }
+
+  // Title styling for certificates section
+  &__title {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+    margin-top: 5.5rem;
+
+    // Tablet styles
+    @include tablet {
+      font-size: 3rem;
+    }
+
+    // Desktop styles
+    @include desktop {
+      font-size: 5rem;
+    }
+  }
+
+  // Grid layout for certificate cards
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    // Tablet styles
+    @include tablet {
+      gap: 2rem;
+    }
+  }
+
+  // Individual certificate card styling
+  .certificate__card {
+    position: relative;
+    border-radius: 8px;
+    padding: 1rem;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+
+    // Hover effect for card
+    &:hover {
+      transform: translateY(-10px);
+
+      .certificate__overlay {
+        opacity: 1;
+      }
+    }
+  }
+
+  // Image container inside the certificate card
+  .certificate__image-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
+  // Image styling inside certificate card
+  .certificate__image {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+  }
+
+  // Overlay on top of certificate image
+  .certificate__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    padding: 1rem;
+    text-align: center;
+  }
+
+  // Certificate description inside the card
+  .certificate__description {
+    font-size: 1rem;
+    margin: 0;
+    font-weight: normal;
+  }
+
+  // Certificate title inside the card
+  .certificate__title {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+
+    // Tablet styles
+    @include tablet {
+      font-size: 1.25rem;
+    }
+  }
+
+  // Form layout inside certificate section
+  &__form {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    max-width: 37.5rem;
+    margin: 0 auto;
+    align-items: center;
+
+    // Mobile styles
+    @media (max-width: 767px) {
+      flex-direction: column;
+    }
+  }
+
+  // Input fields inside the form
+  input {
+    flex: 1;
+    padding: 0.75rem;
+    border: 1px solid;
+    border-radius: 4px;
+    font-size: 1rem;
+  }
+
+  // Button styling inside the form
+  &__button {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    white-space: nowrap;
+  }
+
+  // Error message styling
+  &__error {
+    color: red;
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+    text-align: center;
+  }
+
+  // Success message styling
+  &__message {
+    font-size: 1rem;
+    margin-top: 1rem;
+    text-align: center;
+    @include tablet{
+      margin-left: -16.5rem;
+  }
+
+
+}
+  // Open icon inside certificate card
+  .certificate__open-icon {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    padding: 0.5rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+    z-index: 1;
+  }
+
+  // Open icon size styling
+  .open-icon {
+    width: 24px;
+    height: 24px;
+  }
+}

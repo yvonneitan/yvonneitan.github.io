@@ -1,0 +1,124 @@
+@use "./partials/variables" as *;
+@use "./partials/mixins" as *;
+
+// Universal Styling
+* {
+  box-sizing: border-box;
+  // cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='48' height='48' fill='%23FFD700'%3E%3Ccircle cx='12' cy='12' r='10' fill='%23FFD700'/%3E%3Ccircle cx='8' cy='10' r='1.5' fill='%23000'/%3E%3Ccircle cx='16' cy='10' r='1.5' fill='%23000'/%3E%3Cpath d='M8 16c1.5 1 3 1.5 4 1.5s2.5-.5 4-1.5' stroke='%23000' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E"), auto;
+}
+
+// Global Body Styling
+body {
+  margin: 0;
+  background-color: $background-color;
+  color: $text-color;
+  font-family: sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body[data-theme="dark"] {
+  background-color: background-color;
+  color: $greyText-color;
+}
+
+body[data-theme="light"] {
+  background-color: $text-color;
+  color: #000;
+}
+
+// App Layout
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+}
+
+// Loading Spinner
+.loading-spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: $background-color;
+
+  .spinner {
+    border: 8px solid rgba(255, 255, 255, 0.3);
+    border-top: 8px solid #00ff88;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+// Main Layout with Responsive Design
+.main-layout {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+
+  // Tablet Layout (768px - 1024px)
+  @media (max-width: 1024px) and (min-width: 769px) {
+    flex-direction: row; 
+  }
+
+  // Mobile Layout (<= 768px)
+  @media (max-width: 768px) {
+    flex-direction: column; 
+    overflow-y: auto; 
+  }
+}
+
+// Fixed Section for Side Content
+.fixed-section {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 30%;
+  height: 100vh;
+  overflow-y: auto;
+  z-index: 1;
+
+  // Tablet Layout (768px - 1024px)
+  @media (max-width: 1024px) and (min-width: 769px) {
+    width: 40%; // Slightly wider for tablets
+  }
+
+  // Mobile Layout (<= 768px)
+  @media (max-width: 768px) {
+    position: static;
+    width: 100%;
+    height: auto;
+    overflow-y: visible;
+  }
+}
+
+// Scrollable Section for Main Content
+.scrollable-section {
+  flex: 1;
+  margin-left: 30%;
+  overflow-y: auto;
+  height: 100vh;
+
+  // Tablet Layout (768px - 1024px)
+  @media (max-width: 1024px) and (min-width: 769px) {
+    margin-left: 40%; 
+  }
+
+  // Mobile Layout (<= 768px)
+  @media (max-width: 768px) {
+    margin-left: 0;
+    height: auto;
+    overflow-y: visible;
+  }
+}

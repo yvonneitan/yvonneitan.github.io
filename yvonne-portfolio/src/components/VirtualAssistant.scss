@@ -1,0 +1,194 @@
+
+.virtual-assistant-popup {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  width: 320px;
+  max-height: 400px;
+  overflow-y: auto;
+  padding: 20px;
+  font-family: "AvenirNextLTPro-Regular", sans-serif;
+  z-index: 1000;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Chat window */
+.assistant-chat {
+  margin-bottom: 20px;
+  max-height: 250px;
+  overflow-y: auto;
+  padding-right: 10px;
+}
+
+/* Messages */
+.message {
+  margin-bottom: 15px;
+  padding: 10px 15px;
+  border-radius: 8px;
+  line-height: 1.4;
+  font-size: 16px;
+  margin-top: 1rem;
+}
+
+.user-message {
+  background-color: #f1f1f1;
+  color: #323232;
+  text-align: right;
+}
+
+.assistant-message {
+  background-color: #257c54; /* Green for assistant messages */
+  color: white;
+  text-align: left;
+}
+
+/* Input Field */
+.message-form {
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+}
+
+.message-form input {
+  width: 80%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  color: #323232;
+  background-color: #f9f9f9;
+  transition: border-color 0.3s ease;
+}
+
+.message-form input:focus {
+  border-color: #257c54; /* Green on focus */
+}
+
+.message-form button {
+  background-color: #257c54;
+  color: white;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.message-form button:hover {
+  background-color: darken(#257c54, 10%);
+}
+
+/* Quick Action Buttons */
+.quick-actions {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.quick-action-btn {
+  background-color: white;
+  color: #257c54;
+  padding: 8px 12px;
+  border-radius: 6px;
+  border:0.0625rem solid #257c54;
+  font-size: 14px;
+  text-align: center;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+}
+
+.quick-action-btn:hover {
+  background-color: darken(#257c54, 15%);
+  color: white;
+}
+
+/* Toggle Speech Button */
+.speech-toggle-btn {
+  background-color: transparent;
+  color: #257c54;
+  border: 1px solid #257c54;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-top: 10px;
+  width: 100%;
+  text-align: center;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.speech-toggle-btn:hover {
+  background-color: #257c54;
+  color: white;
+}
+
+/* Pop-up Trigger Button */
+.assistant-toggle-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #257c54;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s;
+}
+
+/* Bouncing animation */
+.assistant-toggle-btn.dancing {
+  animation: bounce 3s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-10px);
+  }
+  50% {
+    transform: translateY(5px);
+  }
+  75% {
+    transform: translateY(-5px);
+  }
+}
+
+
+.assistant-toggle-btn:hover {
+  background-color: darken(#257c54, 10%);
+}
+
+// .assistant-toggle-btn.dancing {
+//   animation: bounce 3s infinite;
+// }
+/* Close Button */
+.assistant-close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: transparent;
+  color: #323232;
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.assistant-close-btn:hover {
+  color: #ff4d4d; /* Red on hover */
+}
+
+/* Accessibility: Focus Styling */
+.assistant-toggle-btn:focus, .speech-toggle-btn:focus, .message-form input:focus, .quick-action-btn:focus {
+  outline: 2px solid #257c54;
+  outline-offset: 2px;
+}

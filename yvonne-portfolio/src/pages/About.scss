@@ -1,0 +1,159 @@
+@use "../assets/styles/partials/variables" as *;
+@use "../assets/styles/partials/mixins" as *;
+// About section styles
+.about {
+  padding: 1rem;
+  background-color: #f4f4f4;
+  background-image: url("../assets/images/bg.png");
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  border-radius: 1rem;
+  margin: 10rem auto 0;
+  width: 90%;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  // Tablet styles
+  @include tablet {
+    width: 75%;
+    padding: none;
+    margin-top: 8rem auto 0;
+  }
+
+  // Desktop styles
+  @include desktop {
+    width: 75%;
+    padding: none;
+    margin: 9rem auto 0;
+  }
+
+  // Dark mode styles
+  &.dark {
+    background-color: #2a2a2a;
+    color: $secondary-color;
+
+    .about__title {
+      color: $greenText-color;
+    }
+
+    .about__description {
+      color: #ccc;
+    }
+
+    .about__social-icon {
+      filter: brightness(0) invert(1);
+    }
+  }
+
+  // Light mode styles
+  &.light {
+    background-color: #666666;
+    color: #000;
+
+    .about__title {
+      color: #257c54;
+    }
+
+    .about__description {
+      color: #666666;
+    }
+
+    .about__social-icon {
+      filter: none;
+    }
+  }
+
+  // Content container
+  &__content {
+    max-width: 600px;
+    width: 90%;
+
+    @include tablet {
+      margin: 0.1rem auto 0;
+      padding: 0.5rem;
+    }
+  }
+
+  // About title
+  &__title {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    margin-top: 0.5rem;
+  }
+
+  // About description
+  &__description {
+    font-size: 1rem;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+
+  // Social icons container
+  &__social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+  }
+
+  // Social media links
+  &__social-link {
+    display: inline-block;
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: translateY(-3px);
+    }
+  }
+
+  // Social media icon styling
+  &__social-icon {
+    margin-top: 1rem;
+    width: 35px;
+    height: 35px;
+    transition: filter 0.3s ease;
+    cursor: pointer;
+
+    &:hover {
+      filter: invert(1) brightness(1.2) saturate(2) hue-rotate(200deg);
+    }
+  }
+}
+
+// Navigation link with tooltip
+.header__nav-link {
+  position: relative;
+}
+
+// Tooltip styling
+.tooltip-text {
+  visibility: hidden;
+  color: $greenText-color;
+  text-align: center;
+  padding: 0.5rem;
+  border-radius: 4px;
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.3s;
+  white-space: nowrap;
+  font-size: 0.9rem;
+  background: transparent;
+}
+
+// Tooltip hover effect
+.tooltip-target {
+  cursor: pointer;
+}
+
+.tooltip-target:hover + .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}

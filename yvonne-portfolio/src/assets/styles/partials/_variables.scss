@@ -1,0 +1,167 @@
+$primary-color: #000000;
+$secondary-color: #FFFFFF;
+$accent-color: #00FF88;
+$background-color: #1A1A1A;
+$text-color: #E0E0E0;
+$greenText-color: #257c54;
+$greyText-color: rgb(102 103 106);
+
+
+//Header toggle mode colors
+:root {
+  --primary-color: #ffffff; // Light mode primary color
+  --secondary-color: #000000; // Light mode secondary color
+  --accent-color: #ff6347; // Light mode accent color
+  --background-color: #ffffff; // Light mode background color
+  --text-color: #000000; // Light mode text color
+}
+
+[data-theme="dark"] {
+  --primary-color: #121212; // Dark mode primary color
+  --secondary-color: #ffffff; // Dark mode secondary color
+  --background-color: #121212; // Dark mode background color
+  --text-color: #ffffff; // Dark mode text color
+}
+
+// Breakpoints variables
+$breakpoint-tablet: 48rem; // 768px
+$breakpoint-desktop: 80rem; // 1280px
+
+// Global Styles
+body {
+  background-color: $background-color;
+  color: $text-color;
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+// Utility Classes
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+// Navbar
+.navbar {
+  background-color: $primary-color;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  a {
+    color: $text-color;
+    text-decoration: none;
+    margin: 0 1rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: $accent-color;
+    }
+  }
+}
+
+// Buttons
+.button {
+  background-color: $accent-color;
+  color: $primary-color;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+
+  &:hover {
+    background-color: darken($accent-color, 10%);
+    transform: translateY(-2px);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+}
+
+// Sections
+.section {
+  padding: 4rem 2rem;
+  text-align: center;
+
+  &__title {
+    font-size: 2.5rem;
+    color: $secondary-color;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  &__description {
+    font-size: 1.2rem;
+    color: $text-color;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.8;
+  }
+}
+
+// Footer
+.footer {
+  // background-color: $primary-color;
+  padding: 2rem;
+  text-align: center;
+
+  &__text {
+    color: $text-color;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  a {
+    color: $accent-color;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: darken($accent-color, 10%);
+    }
+  }
+}
+
+// Responsive Breakpoints
+@media (max-width: $breakpoint-tablet) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+
+    a {
+      margin: 0.5rem 0;
+    }
+  }
+
+  .section {
+    padding: 3rem 1rem;
+
+    &__title {
+      font-size: 2rem;
+    }
+
+    &__description {
+      font-size: 1rem;
+    }
+  }
+}
+
+@media (max-width: $breakpoint-desktop) {
+  .container {
+    padding: 0 1rem;
+  }
+}
