@@ -9,7 +9,7 @@
 - 💻 I enjoy desigining and creating seamless web experiences of innovative software solutions
 - 🌍 I’m passionate about **user-centered design** and **problem solving** in tech
 
-## Portfolio 💻
+## 💻 Portfolio 
  [yvonneitan.com](https://yvonneitan.com)
 ### 💼 Professional Interests
 - Frontend Development
