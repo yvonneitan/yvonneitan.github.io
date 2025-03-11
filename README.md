@@ -8,14 +8,14 @@
 - 🛠️ **Aspiring Software Engineer, Data Analyst** with an eye in **UX/UI Designing**
 - 💻 I enjoy desigining and creating seamless web experiences of innovative software solutions
 - 🌍 I’m passionate about **user-centered design** and **problem solving** in tech
-
-## 💻 Portfolio 
- [yvonneitan.com](https://yvonneitan.com)
 ### 💼 Professional Interests
 - Frontend Development
 - Full-Stack Development
 - UX/UI Design--->User-Centric Design
-
+  
+## 💻 Portfolio 
+ [yvonneitan.com](https://yvonneitan.com)
+ 
 ## Skills
 
 ### 🛠 Languages & Frameworks
