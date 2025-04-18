@@ -14,10 +14,10 @@
 
 ## <div align="center">Building creative, user-friendly software solutions</div>
 
-<img align="right" alt="Coding" width="400" src="https://media.giphy.com/media/L1R1tvI9svkIWwpVYr/giphy.gif">
+
 
 ## 🚀 About Me
-
+<img align="right" alt="Coding" width="400" src="https://media.giphy.com/media/L1R1tvI9svkIWwpVYr/giphy.gif">
 I'm a passionate software engineer with expertise in full-stack development and a keen eye for UX/UI design. With a background in Computer Science and Big Data Systems, I love creating seamless digital experiences that solve real problems.
 
 - 🔭 I'm currently working on expanding my portfolio with React projects
