@@ -124,7 +124,7 @@ I'm a passionate software engineer with expertise in full-stack development and 
 
 - 🎓 Computer Science and Big Data Systems Graduate
 - 🎓 Software Engineering Graduate
-- <a href="https://yvonneitan.com/awards" target="_blank"><img src="https://img.shields.io/badge/View_All_Awards-FFA500?style=for-the-badge&logo=trophy" alt="View Awards" /></a>
+- <a href="https://yvonneitan.com" target="_blank"><img src="https://img.shields.io/badge/View_All_Awards-FFA500?style=for-the-badge&logo=trophy" alt="View Awards" /></a>
 
 ## 📝 Latest Blog Posts
 <!-- BLOG-POST-LIST:START -->
