@@ -122,7 +122,7 @@ I'm a passionate software engineer with expertise in full-stack development and 
 
 ## 🏆 Achievements
 
-- 🎓 Computer Science and Big Data Systems Graduate
+- 🎓 Computer Science and Big Data Systems Graduate Co-op Designation
 - 🎓 Software Engineering Graduate
 - <a href="https://yvonneitan.com" target="_blank"><img src="https://img.shields.io/badge/View_All_Awards-FFA500?style=for-the-badge&logo=trophy" alt="View Awards" /></a>
 
