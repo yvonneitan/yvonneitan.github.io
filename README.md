@@ -126,12 +126,6 @@ I'm a passionate software engineer with expertise in full-stack development and 
 - 🎓 Software Engineering Graduate
 - <a href="https://yvonneitan.com" target="_blank"><img src="https://img.shields.io/badge/View_All_Awards-FFA500?style=for-the-badge&logo=trophy" alt="View Awards" /></a>
 
-## 📝 Latest Blog Posts
-<!-- BLOG-POST-LIST:START -->
-- ... Coming Up
-<!-- BLOG-POST-LIST:END -->
-
----
 
 <div align="center">
   <img src="https://komarev.com/ghpvc/?username=yvonneitan&style=flat-square&color=blueviolet" alt="Profile views" />
