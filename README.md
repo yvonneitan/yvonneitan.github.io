@@ -18,9 +18,10 @@
 
 ## 🚀 About Me
 <img align="right" alt="Coding" width="400" src="https://media.giphy.com/media/L1R1tvI9svkIWwpVYr/giphy.gif">
-I'm a passionate software engineer with expertise in full-stack development and a keen eye for UX/UI design. With a background in Computer Science and Big Data Systems, I love creating seamless digital experiences that solve real problems.
+I'm a passionate software engineer with expertise in full-stack development and a keen eye for UX/UI design. Experienced Quality Assurance Analyst, IT Support, Engineering, and Business Systems Analyst with a background in Computer Science and Big Data Systems.
+I love creating seamless digital experiences that solve real problems.
 
-- 🔭 I'm currently working on expanding my portfolio with React projects
+- 🔭 I am currently working and learning different ways to best test Web and Desktop applications, their environments and systems that suppport them.
 - 🌱 I'm learning advanced data visualization techniques
 - 👯 Open to collaborate on innovative web applications
 - 💬 Ask me about frontend development, UX strategies, or data systems
