@@ -9,7 +9,7 @@
 </div>
 
 <div align="center">
-  <img src="https://readme-typing-svg.herokuapp.com/?lines= Quality+Assurance+Analyst;Software+Developer;UI/UX+Enthusiast;Data+Analyst;Problem+Solver&center=true&width=380&height=45&color=f75c7e&vCenter=true&size=22">
+  <img src="https://readme-typing-svg.herokuapp.com/?lines=QA+Analyst;Software+Developer;UI/UX+Enthusiast;Data+Analyst;Problem+Solver&center=true&width=380&height=45&color=f75c7e&vCenter=true&size=22">
 </div>
 
 ## <div align="center">Building creative, user-friendly software solutions</div>
